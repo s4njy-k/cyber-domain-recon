@@ -47,7 +47,7 @@ async def main():
     # Step 2: Analyze
     logger.info("Starting AI analysis phase...")
     for domain, data in scan_results.items():
-        analysis_data = analyzer.analyze_domain(data)
+        analysis_data = analyzer.analyze_domain(data, domain)
         
         final_results.append({
             "domain": domain,
