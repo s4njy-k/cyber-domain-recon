@@ -25,6 +25,7 @@ class DomainScanner:
         logger.info(f"Scanning {url} using {device_name}")
         
         context_args = {**device}
+        context_args.pop("default_browser_type", None)
         if proxy:
              context_args["proxy"] = proxy
 
