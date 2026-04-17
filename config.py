@@ -33,7 +33,7 @@ SCREENSHOTS_DIR = os.path.join(REPORTS_DIR, "screenshots")
 DEFAULT_DOMAINS_FILE = "domains.txt"
 
 # Gemini Config
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3-flash-preview"
 
 # System Prompt explicitly tailored for Indian Cybercrime Analyst
 SYSTEM_PROMPT = """You are an expert cybercrime analyst working in India. Your specialty is analyzing potential malicious websites. 
