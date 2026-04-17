@@ -16,7 +16,7 @@ The collected footprint is then analyzed using Google's Gemini AI to generate a 
 
 2. Export your Gemini API Key:
    ```bash
-   export GOOGLE_API_KEY="your_api_key_here"
+   export GOOGLE_API_KEY="AIzaSyCSzhSQlSCo2Dx5svVTu0TUq9VC5ZmZ490"
    ```
 
 3. Configure your proxies (Optional):

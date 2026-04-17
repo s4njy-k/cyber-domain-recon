@@ -22,7 +22,7 @@ DEVICES = [
     "Desktop Safari",
     "Pixel 7",
     "iPhone 14",
-    "Galaxy S22",
+    "Galaxy S9+",
 ]
 
 # Output Directories

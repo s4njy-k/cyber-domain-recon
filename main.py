@@ -2,6 +2,7 @@ import asyncio
 import argparse
 import os
 import logging
+import subprocess
 from config import DEFAULT_DOMAINS_FILE
 from scanner import DomainScanner
 from analyzer import AnalystEngine
@@ -60,6 +61,16 @@ async def main():
     report_path = reporter.generate(final_results)
     
     logger.info(f"Done! Report saved to: {report_path}")
+
+    # Git Auto-Push Execution block
+    try:
+        logger.info("Executing automated Git preservation sync...")
+        subprocess.run(["git", "add", "reports/"], check=True)
+        subprocess.run(["git", "commit", "-m", "chore: automated intel report sync"], check=False)
+        subprocess.run(["git", "push"], check=True)
+        logger.info("Successfully pushed reports to GitHub.")
+    except Exception as git_err:
+        logger.error(f"Failed to auto-push to Git: {git_err}")
 
 if __name__ == "__main__":
     # Ensure Playwright dependencies exist. We run asyncio.run
