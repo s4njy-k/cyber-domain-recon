@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: cyber-recon
+    env: docker
+    dockerfilePath: ./Dockerfile
+    region: ohio
+    plan: free
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
